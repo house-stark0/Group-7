@@ -9,35 +9,35 @@ import java.util.ResourceBundle;
  */
 public enum FxmlView {
 
-    USER {
+    CUSTOMER {
         @Override
         public String getTitle() {
-            return getStringFromResourceBundle("user.title");
+            return getStringFromResourceBundle("customer.title");
         }
 
         @Override
         public String getFxmlFile() {
-            return "/fxml/User.fxml";
+            return "/fxml/customer.fxml";
         }
-    }, APPOINTMENT {
+    }, TRANSACTION {
         @Override
         public String getTitle() {
-            return getStringFromResourceBundle("appointment.title");
+            return getStringFromResourceBundle("transaction.title");
         }
 
         @Override
         public String getFxmlFile() {
-            return "/fxml/appointment.fxml";
+            return "/fxml/transaction.fxml";
         }
-    }, CANCELATION {
+    }, CANCELLATION {
         @Override
         public String getTitle() {
-            return getStringFromResourceBundle("cancelation.title");
+            return getStringFromResourceBundle("cancellation.title");
         }
 
         @Override
         public String getFxmlFile() {
-            return "/fxml/cancelation.fxml";
+            return "/fxml/cancellation.fxml";
         }
     };
 

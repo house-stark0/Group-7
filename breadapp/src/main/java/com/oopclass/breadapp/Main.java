@@ -41,7 +41,7 @@ public class Main extends Application {
     }
 
     protected void displayInitialScene() {
-        stageManager.switchScene(FxmlView.USER);
+        stageManager.switchScene(FxmlView.CUSTOMER);
     }
 
     private ConfigurableApplicationContext springBootApplicationContext() {

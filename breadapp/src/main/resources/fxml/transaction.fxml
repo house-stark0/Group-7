@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="-Infinity" prefHeight="828.0" prefWidth="1122.0" style="-fx-border-width: 5; -fx-border-color: #e1bc3c;" stylesheets="@styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oopclass.breadapp.controllers.TransactionController">
+   <left>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="828.0" prefWidth="356.0" spacing="10.0" style="-fx-background-color: #4a171e;" styleClass="background" stylesheets="@styles/Styles.css">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="265.0">
+               <children>
+                  <Label fx:id="transactionId">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="25.0" />
+               </VBox.margin>
+            </HBox>
+            <Label>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <ImageView fitHeight="160.0" fitWidth="345.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/156482096_870948063693752_7488814764672796666_n.jpg" />
+               </image>
+            </ImageView>
+            <Label text="TRANSACTION" textFill="#e1bc3c">
+               <font>
+                  <Font name="Courier New Bold" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="apFullName" layoutX="15.0" layoutY="232.0" prefHeight="30.0" prefWidth="246.0" promptText="Fullname" style="-fx-background-color: #8a715c;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="apAddress" layoutX="15.0" layoutY="272.0" prefHeight="30.0" prefWidth="246.0" promptText="Address" style="-fx-background-color: #8a715c;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="apContactNo" layoutX="15.0" layoutY="232.0" prefHeight="30.0" prefWidth="246.0" promptText="Contact No." style="-fx-background-color: #8a715c;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="apRevision" prefHeight="30.0" prefWidth="246.0" promptText="Revision" style="-fx-background-color: #8a715c;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="255.0" spacing="15.0">
+               <VBox.margin>
+                  <Insets left="25.0" right="25.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <children>
+                  <RadioButton fx:id="rbAccepted" mnemonicParsing="false" text="Accepted" textFill="WHITE">
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding></RadioButton>
+                  <RadioButton fx:id="rbDeclined" mnemonicParsing="false" text="Declined" textFill="WHITE">
+                     <padding>
+                        <Insets left="100.0" />
+                     </padding></RadioButton>
+               </children>
+            </HBox>
+            <DatePicker fx:id="doa" prefHeight="40.0" prefWidth="296.0" promptText="Date of Meeting" style="-fx-background-insets: #8a715c;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </DatePicker>
+            <Button fx:id="UserPanel" mnemonicParsing="false" onAction="#UserPanel" prefHeight="27.0" prefWidth="179.0" style="-fx-background-color: #613e26;" text="Back" textFill="#cdb5a5">
+               <font>
+                  <Font name="Impact" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="CancelPanel" layoutX="15.0" layoutY="368.0" mnemonicParsing="false" onAction="#CancelPanel" prefHeight="27.0" prefWidth="179.0" style="-fx-background-color: #613e26;" text="Cancellation " textFill="#cdb5a5">
+               <font>
+                  <Font name="Impact" size="15.0" />
+               </font>
+            </Button>
+            <HBox prefHeight="28.0" prefWidth="300.0" spacing="10.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Button fx:id="addtransactions" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addtransactions" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #613e26;" styleClass="btnGreen" text="Save" textFill="#cdb5a5">
+                     <font>
+                        <Font name="Impact" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deletetransactions" alignment="CENTER" layoutX="100.0" layoutY="10.0" mnemonicParsing="false" onAction="#deletetransactions" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #613e26;" text="Delete" textFill="#cdb5a5">
+                     <font>
+                        <Font name="Impact" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="reset" alignment="CENTER" layoutX="100.0" layoutY="10.0" mnemonicParsing="false" onAction="#reset" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #613e26;" text="Reset" textFill="#cdb5a5">
+                     <font>
+                        <Font name="Impact" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="110.0" top="100.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="150.0" />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="819.0" prefWidth="755.0" style="-fx-background-color: #e9dcac;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="700.0" prefWidth="726.0" />
+            <TableView fx:id="apTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="772.0" prefWidth="748.0" tableMenuButtonVisible="true">
+              <columns>
+                  <TableColumn fx:id="colapId" maxWidth="2000.0" minWidth="-Infinity" prefWidth="109.0" text="ID" />
+                  <TableColumn fx:id="colFullname" maxWidth="4000.0" prefWidth="75.0" text="Fullname" />
+                  <TableColumn fx:id="colAddress" maxWidth="4000.0" prefWidth="75.0" text="Address" />
+                  <TableColumn fx:id="colContactNo" maxWidth="4000.0" prefWidth="75.0" text="Contact No." />
+                  <TableColumn fx:id="colRevision" maxWidth="4000.0" prefWidth="75.0" text="Revision" />
+                  <TableColumn fx:id="colStatus" maxWidth="4000.0" prefWidth="75.0" text="Status" />
+                  <TableColumn fx:id="coldoa" maxWidth="4000.0" prefWidth="132.0" text="Date of Meeting" />
+                  <TableColumn fx:id="colCreatedAt" maxWidth="4000.0" prefWidth="64.0" text="Created" />
+                  <TableColumn fx:id="colUpdatedAt" maxWidth="4000.0" prefWidth="75.0" text="Updated" />
+                  <TableColumn fx:id="colEdit" maxWidth="4000.0" prefWidth="75.0" text="Edit" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="10.0" right="5.0" top="50.0" />
+               </VBox.margin>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
